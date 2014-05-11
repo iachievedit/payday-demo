@@ -1,0 +1,27 @@
+<h1>Listing invoiceitems</h1>
+
+<table>
+  <tr>
+    <th>Invoice</th>
+    <th>Description</th>
+    <th>Amount</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @invoiceitems.each do |invoiceitem| %>
+  <tr>
+    <td><%= invoiceitem.invoice_id %></td>
+    <td><%= invoiceitem.description %></td>
+    <td><%= invoiceitem.amount %></td>
+    <td><%= link_to 'Show', invoiceitem %></td>
+    <td><%= link_to 'Edit', edit_invoiceitem_path(invoiceitem) %></td>
+    <td><%= link_to 'Destroy', invoiceitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Invoiceitem', new_invoiceitem_path %>

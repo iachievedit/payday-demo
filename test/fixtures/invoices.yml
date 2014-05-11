@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bill_to: MyString
+  paid: 
+  paid_on: 2014-05-11
+
+two:
+  bill_to: MyString
+  paid: 
+  paid_on: 2014-05-11
